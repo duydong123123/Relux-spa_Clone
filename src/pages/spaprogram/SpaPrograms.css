@@ -1,0 +1,196 @@
+.spa-programs-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #4A2C2A;
+}
+
+.spa-the-service-section {
+    position: relative; /* Đặt vị trí tương đối để các phần tử con có thể dùng position absolute */
+    width: 100%;
+    max-width: 1400px; /* Điều chỉnh chiều rộng tối đa của phần */
+    margin: 0 auto;
+}
+
+.spa-service-image {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    max-width: 1400px; /* Điều chỉnh chiều rộng tối đa của ảnh */
+    text-align: center;
+}
+
+.spa-service-title {
+    position: absolute;
+    top: 40%; /* Đặt tiêu đề ở giữa chiều dọc của ảnh */
+    left: 30%;
+    transform: translate(-50%, -50%); /* Căn giữa tiêu đề theo cả chiều ngang và dọc */
+    color: white; /* Màu chữ trắng để nổi bật trên ảnh */
+    font-size: 70px; /* Kích thước chữ của tiêu đề */
+    font-weight: bold;
+    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); Đổ bóng cho chữ để dễ đọc hơn */
+    color: rgba(0, 0, 0, 1);
+    
+}
+
+
+.spa-programs-container {
+    display: flex;
+    flex-direction: row; /* Đặt ảnh và văn bản nằm ngang */
+    align-items: flex-start; /* Căn các thành phần theo đầu hàng */
+    max-width: 1600px;
+    width: 100%;
+    padding: 40px;
+    gap: 100px; /* Khoảng cách giữa ảnh và văn bản */
+}
+
+.spa-programs-left {
+    order: 1; /* Đặt thứ tự của ảnh ở bên trái */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 300px; /* Tạo khoảng cách giữa ảnh và FaqSection */
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Điều chỉnh chiều rộng tối đa nếu cần */
+    max-height:auto;
+    margin: 0 auto;
+    margin-bottom: 40px; /* Tạo khoảng cách giữa ảnh và FaqSection */
+}
+
+.spa-image-large {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.spa-image-small {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Căn chỉnh kích thước và vị trí của ảnh nhỏ bên trái (Karoli) */
+.spa-image-small:nth-child(3) {
+    width: 236px; /* Kích thước ảnh nhỏ bên trái */
+    height: 209px;
+    bottom: -220px; /* Điều chỉnh vị trí phía dưới của ảnh lớn */
+    left: 20px;
+}
+
+/* Căn chỉnh kích thước và vị trí của ảnh nhỏ bên phải (Cop) */
+.spa-image-small:nth-child(2) {
+    width: 236px; /* Kích thước ảnh nhỏ bên phải */
+    height: 209px;
+    top: 85%; /* Điều chỉnh để nằm ở góc dưới bên phải ảnh lớn */
+    right: -90px;
+}
+
+.spa-programs-right {
+    order: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px; /* Thêm khoảng trống ở dưới */
+}
+
+.spa-program {
+    margin-bottom: 30px; /* Tăng khoảng cách giữa các chương trình */
+    padding-bottom: 20px; /* Thêm không gian bên dưới từng phần chương trình */
+    border-bottom: 1px solid #CCC;
+}
+
+.program-title {
+    font-size: 20px; /* Tăng kích thước chữ một chút */
+    font-weight: bold;
+    color: #9F2C2E;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.program-description {
+    font-size: 15px; /* Tăng kích thước font của mô tả */
+    color: #5A5A5A;
+    margin-top: 50px;
+    line-height: 1.6; /* Tăng khoảng cách dòng để làm văn bản kéo dài hơn */
+}
+
+
+.program-price {
+    font-size: 18px;
+    color: #4A2C2A;
+    float: right;
+}
+.book-the-service-section {
+    position: relative; /* Cho phép các phần tử con sử dụng position absolute */
+    width: 100%;
+    max-width: 1400px; /* Điều chỉnh chiều rộng tối đa */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book-service-image {
+    width: 100%;
+    max-width: 1400px;
+    height: 460px;
+    border-radius: 8px;
+}
+
+/* Định vị tiêu đề ở trên ảnh */
+.book-service-title {
+    position: absolute;
+    top: 30%; /* Điều chỉnh vị trí từ trên xuống */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 32px; /* Tăng kích thước chữ cho tiêu đề */
+    font-weight: bold;
+    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); Đổ bóng để nổi bật */
+    color: rgba(97, 19, 61, 1);
+    font-family: Itim;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 76.8px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Định vị nút bên dưới tiêu đề */
+.book-appointment-button {
+    position: absolute;
+    top: 60%; /* Điều chỉnh vị trí của nút */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    /* background-color: #fff; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 42px;
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); Đổ bóng để dễ đọc */
+    font-family: 'Kaushan Script', cursive;
+    color : rgba(97, 19, 61, 1);
+
+}
+
+.book-appointment-button:hover {
+    background-color: #fff;
+}
+
+
+/* Đặt FaqSection ở giữa */
+.faq-section {
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    max-width: 1400px; /* Giới hạn chiều rộng tối đa nếu cần */
+    margin: 0 auto; /* Căn giữa phần tử */
+    padding: 20px; /* Khoảng đệm để tạo không gian */
+    text-align:center;  
+}
