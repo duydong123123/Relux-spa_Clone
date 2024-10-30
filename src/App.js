@@ -13,6 +13,7 @@ import Massages from './pages/massages/Massages';
 import Facial from './pages/facials/Facials';
 import Body from './pages/body/Body';
 import Pagesimage from './pages/pageimages/Pagesimage';
+import ContactPage from './pages/contact/ContactPage';
 // import useSearch from './hook/useSearch';
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/facial-treatments" element={<Facial />} />
           <Route path="/body-treatments" element={<Body />} />
           <Route path="/pages" element={<Pagesimage />} />
+          <Route path="/contacts" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>
