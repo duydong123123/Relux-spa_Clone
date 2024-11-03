@@ -1,68 +1,258 @@
+/* Kiểu dáng cho Header và Logo */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #F3F3EF;
-    border-bottom: 1px solid #e5e5e5;
-    width: 1440px;
-    height: 125px;
-    gap: 0px;
-    opacity: 1;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 120px;
-    height: 64.41px;
-  }
-  
-  .logo h1 {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 55px;
-    font-weight: 400;
-    line-height: 80px;
-    letter-spacing: 0.01em;
-    margin-left: 10px;
-    text-align: center;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-  }
-  
-  .nav-links li {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .nav-links li a:hover {
-    color: #7c6e75;
-  }
-  
-  .small-icon {
-    margin-left: 8px;
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-  }
-  
-  .icon img {
-    width: 75px;
-    height: 55.15px;
-    opacity: 1;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #F3F3EF;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  max-width: 1440px;
+  height: 125px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: 64.41px;
+}
+
+.logo h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0.01em;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* Kiểu dáng cho liên kết điều hướng */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-links li a:hover {
+  color: #7c6e75;
+}
+
+.small-icon {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.icon img {
+  width: 75px;
+  height: 55.15px;
+  opacity: 1;
+}
+
+/* Kiểu dáng cho nút Đặt Lịch */
+.appointment-button {
+  padding: 10px 20px;
+  border: 1px solid #7c6e75;
+  background-color: transparent;
+  color: #7c6e75;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.appointment-button:hover {
+  background-color: #7c6e75;
+  color: #fff;
+}
+
+/* Kiểu dáng cho Panel Đặt Lịch */
+.appointment-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px; /* Tăng độ rộng panel cho rộng hơn */
+  height: 100%;
+  background-color: #F3F3EF;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.appointment-panel.open {
+  transform: translateX(0);
+}
+
+.appointment-panel h2 {
+  font-family: 'Kaushan Script', cursive;
+  color: #7c6e75;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.appointment-panel label {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.appointment-panel select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Kiểu dáng cho nút đóng Panel */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #7c6e75;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Kiểu dáng cho phần hiển thị Lịch */
+.calendar-view {
+  text-align: center;
+}
+
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Kiểu dáng cho nút ngày trong lịch */
+.date-button {
+  padding: 10px;
+  border: 1px solid #7c6e75;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.date-button.selected {
+  background-color: #7c6e75;
+  color: #fff;
+}
+
+.date-button:disabled {
+  color: #ccc;
+  border-color: #e5e5e5;
+  cursor: not-allowed;
+}
+
+/* Kiểu dáng cho các nút Thời Gian */
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.time-slot {
+  padding: 10px 15px;
+  border: 1px solid #7c6e75;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.time-slot.selected {
+  background-color: #7c6e75;
+  color: #fff;
+}
+
+/* Kiểu dáng cho nút Tiếp Theo và Quay Lại */
+.next-button, .back-button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.next-button {
+  background-color: #7c6e75;
+  color: #fff;
+  border: none;
+}
+
+.next-button:hover {
+  background-color: #5a2d36;
+}
+
+.next-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.back-button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.back-button:hover {
+  background-color: #e5e5e5;
+}
+
+/* Kiểu dáng khi focus cho Accessibility */
+.date-button:focus, .time-slot:focus, .next-button:focus, .back-button:focus, .close-button:focus {
+  outline: 2px solid #7c6e75;
+  outline-offset: 2px;
+}
